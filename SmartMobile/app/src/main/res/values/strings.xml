@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SmartMobileActivity!</string>
+    <string name="app_name">SmartMobile</string>
+
+    <color name="cor_vermelho">#fff00000</color>
+    <color name="cor_verde">#228B22</color>
+    <color name="cor_azul">#0000FF</color>
+    <color name="all_white">#FFFFFF</color>
+    <color name="all_black">#000000</color>
+    <color name="all_laranja">#FF7300</color>
+    <color name="all_cinza">#363636</color>
+    <color name="textoSimples">#999797</color>
+    <color name="titulo">#565656</color>
+    <color name="textoLaranja">#fb8c58</color>
+    <color name="fundoProdutoSel">#FACD84</color>
+    <color name="fundoProdutoJaAdd">#C2EDD7</color>
+    <color name="cor_label">#00008B</color>
+    <color name="cor_linha_mapa">#81bbf9</color>
+    <color name="cor_borda_mapa">#2977bb</color>
+
+    <string name="passSenha">Senha</string>
+    <string name="menu">Menu Principal</string>
+    <string name="link">&lt;a href="http://amsoft.com.br/download/SmartMobile.apk"&gt;aqui&lt;/a&gt;</string>
+    <string name="www">&lt;a href="http://amsoft.com.br/"&gt;www.&lt;/a&gt;</string>
+    <string name="link_nome">&lt;a href="http://amsoft.com.br/"&gt;amsoft&lt;/a&gt;</string>
+    <string name="com">&lt;a href="http://amsoft.com.br/"&gt;.com.br&lt;/a&gt;</string>
+    <string name="title_activity_rota_mapa">RotaMapa</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="ProdutosWhere">
+        <item>Todos</item>
+        <item>Descrição</item>
+        <item>Código</item>
+        <item>Grupo</item>
+    </string-array>
+
+</resources>

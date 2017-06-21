@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conteudo_sombra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayoutVendas"
+        android:layout_alignParentTop="true"
+        android:background="@color/all_white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/vendaAte"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="Até.."
+                android:inputType="date" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/vendaDe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="De.."
+                android:inputType="date" />
+
+            <Spinner
+                android:id="@+id/vendaDatas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-3dp"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/vendaFiltro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="98"
+                android:hint="Filtro" />
+
+            <ImageButton
+                android:id="@+id/botaoAgrupar"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_marginTop="-2dp"
+                android:layout_weight="1"
+                android:background="@drawable/botao_tipo_lista"
+                android:cropToPadding="false"
+                android:paddingLeft="10dp"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/btnConsEmpresa"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_marginTop="-2dp"
+                android:layout_weight="1"
+                android:background="@drawable/botao_filtro"
+                android:cropToPadding="false"
+                android:paddingLeft="10dp"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/vendaListView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:fastScrollEnabled="true"
+                android:persistentDrawingCache="scrolling"
+                android:scrollingCache="false" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/relativeLayoutVendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: R$ "
+            android:textColor="@color/all_black" />
+
+        <TextView
+            android:id="@+id/vendaSomaTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/all_black" />
+    </LinearLayout>
+
+</RelativeLayout>

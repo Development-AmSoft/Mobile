@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/x_situacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ico_sync0" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lblPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nº "
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="3dip"
+                android:text="1000"
+                android:textColor="@color/all_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtNome"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="NOME DO CLIENTE"
+                android:textColor="@color/all_black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtFantasia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="FANTASIA BEM GRANDE BLA BLA BLA BLA 12312312"
+                android:textColor="@color/all_black" />
+            <TextView
+                android:id="@+id/lblData"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="Data:"
+                android:layout_weight="1"
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtData"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:paddingRight="3dip"
+                android:layout_weight="1"
+                android:text="01/01/2012"
+                android:textColor="@color/all_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtCPFCNPJ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="CPFCNPJ"
+                android:textColor="@color/all_black" />
+            
+             <TextView
+                android:id="@+id/lblTotal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="Total R$:"
+                android:layout_weight="1"
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:paddingRight="3dip"
+                android:layout_weight="1"
+                android:text="01/01/2012"
+                android:textColor="@color/all_black" />
+
+            
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtCidade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="CIDADE"
+                android:textColor="@color/all_black" />
+            
+             <TextView
+                android:id="@+id/lblTotalST"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:text="Total+ST+IPI:"
+                android:layout_weight="1"
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtTotalST"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:paddingRight="3dip"
+                android:layout_weight="1"
+                android:text="01/01/2012"
+                android:textColor="@color/all_black" />
+
+           
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lblST"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ST+IPI:"
+                android:layout_weight="1"
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtST"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.00"
+                android:textColor="@color/all_black" />
+            
+             <TextView
+                android:id="@+id/lblStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:layout_weight="1"
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtSituacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="3dip"
+                android:layout_weight="1"
+                android:text="01/01/2012"
+                android:textColor="@color/all_black" />
+
+           
+        </LinearLayout>
+
+     <!--    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtCidade3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/all_black" />
+
+           
+        </LinearLayout>
+         -->
+    </LinearLayout>
+
+</LinearLayout>

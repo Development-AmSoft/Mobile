@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- row.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conteudo_sombra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/all_white"
+        android:orientation="vertical"
+        android:paddingTop="3dp" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@color/all_white"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dip"
+            android:paddingTop="5px" >
+
+            <EditText
+                android:id="@+id/edtFiltro"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/btnSincroniza"
+                android:layout_width="48dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:cropToPadding="false"
+                android:paddingLeft="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ico_sincronizar" >
+            </ImageButton>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/SCHEDULE"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="5dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/InnerRelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/all_white"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:paddingTop="3dp" >
+
+                <TextView
+                    android:id="@+id/lblStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingBottom="2dip"
+                    android:gravity="center"
+                    android:text="Saldo Disponível: "
+                    android:textColor="@color/titulo" />
+
+                <TextView
+                    android:id="@+id/lblSaldoDisp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:paddingRight="3dip"
+                    android:text="0.00"
+                    android:textColor="@color/titulo" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

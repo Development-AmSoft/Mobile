@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget44"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/itens_principal_sombra"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/icone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ico_produtos"
+        android:adjustViewBounds="true" >
+    </ImageView>
+
+  <TextView
+        android:id="@+id/icone_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/textoLaranja" >
+    </TextView>
+   
+
+</LinearLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/frmprincipal_layoutitens.xml -->

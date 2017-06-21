@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/listViewPedidos"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </ListView>
+
+
+</RelativeLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/lay_dialog_pedidos_sincronizar.xml -->

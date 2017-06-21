@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/m_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/all_white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/m_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:scrollbarStyle="outsideInset" >
+
+        <LinearLayout
+            android:id="@+id/m_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lblProdLabel"
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Produto : "
+                android:textColor="@color/cor_label" />
+
+            <LinearLayout
+                android:id="@+id/m_content88"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/txtDescricao"
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="NOME DO PRODUTO"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/txtUND"
+                    style="@android:style/TextAppearance.Small"
+                    android:layout_width="60dip"
+                    android:layout_height="fill_parent"
+                    android:enabled="false"
+                    android:text="UN"
+                    android:textColor="@color/all_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:gravity="left"
+                        android:text="Valor Tabela"
+                        android:textColor="@color/all_black" />
+
+                    <EditText
+                        android:id="@+id/txtValorCad"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/all_black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="60"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:gravity="left"
+                        android:text="Qtde"
+                        android:textColor="@color/cor_label" />
+
+                    <ImageView
+                        android:id="@+id/qtdePlus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="15"
+                        android:clickable="true"
+                        android:src="@drawable/botao_adicionar" />
+
+                    <EditText
+                        android:id="@+id/txtQtde"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:digits="0123456789."
+                        android:gravity="right"
+                        android:inputType="numberDecimal"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:textColor="@color/all_black" />
+
+                    <ImageView
+                        android:id="@+id/qtdeRemove"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="15"
+                        android:clickable="true"
+                        android:src="@drawable/botao_remover" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:gravity="left"
+                        android:text="Desc Max"
+                        android:textColor="@color/all_black" />
+
+                    <EditText
+                        android:id="@+id/txtDescMax"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/all_black" >
+
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="60"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="35"
+                        android:gravity="left"
+                        android:text="Valor R$"
+                        android:textColor="@color/cor_azul" />
+
+                    <EditText
+                        android:id="@+id/txtValor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:digits="0123456789."
+                        android:gravity="right"
+                        android:inputType="numberDecimal"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:textColor="@color/cor_azul" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:gravity="left"
+                        android:text="Peso"
+                        android:textColor="@color/all_black" />
+
+                    <EditText
+                        android:id="@+id/pesoProduto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/all_black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="60"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="35"
+                        android:gravity="left"
+                        android:text="Saldo Flex"
+                        android:textColor="@color/cor_label" />
+
+                    <EditText
+                        android:id="@+id/txtSaldo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/all_black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:gravity="left"
+                        android:text="Desc. R$"
+                        android:textColor="@color/cor_vermelho" />
+
+                    <EditText
+                        android:id="@+id/txtDesconto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        android:selectAllOnFocus="true"
+                        android:text="0.00"
+                        android:textColor="@color/cor_vermelho" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="60"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="35"
+                        android:gravity="left"
+                        android:text="Desc. %"
+                        android:textColor="@color/cor_vermelho" />
+
+                    <EditText
+                        android:id="@+id/txtDescontoPorcentagem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:selectAllOnFocus="true"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/cor_vermelho" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:gravity="left"
+                        android:text="Acresc. R$"
+                        android:textColor="@color/cor_verde" />
+
+                    <EditText
+                        android:id="@+id/txtAcrescimo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:selectAllOnFocus="true"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/cor_verde" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="60"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="35"
+                        android:gravity="left"
+                        android:text="Acresc. %"
+                        android:textColor="@color/cor_verde" />
+
+                    <EditText
+                        android:id="@+id/txtAcrescimoPorcentagem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:selectAllOnFocus="true"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/cor_verde" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="31dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        style="@android:style/TextAppearance.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="Total R$"
+                        android:textStyle="bold"
+                        android:textColor="@color/all_black" />
+
+                    <EditText
+                        android:id="@+id/txtTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0.00"
+                        android:textColor="@color/all_black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="1"
+            android:weightSum="100" >
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnVoltar"
+                    android:layout_width="0dp"
+                    android:layout_height="48dip"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="50"
+                    android:drawableLeft="@drawable/ico_voltar"
+                    android:gravity="right"
+                    android:scaleType="fitCenter"
+                    android:text=" Voltar"
+                    android:textColor="@color/all_black" >
+                </Button>
+
+                <Button
+                    android:id="@+id/btnSalvar"
+                    android:layout_width="0dp"
+                    android:layout_height="48dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="50"
+                    android:drawableRight="@drawable/ico_salvar"
+                    android:gravity="left"
+                    android:scaleType="fitCenter"
+                    android:text="Salvar"
+                    android:textColor="@color/all_black" >
+                </Button>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/lay_cad_pedido_item.xml -->

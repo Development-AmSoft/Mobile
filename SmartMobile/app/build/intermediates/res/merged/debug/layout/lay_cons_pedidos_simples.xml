@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	
+    
+     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:orientation="horizontal">
+    
+	 <ImageView 
+	 android:id="@+id/x_situacao"
+	 android:layout_width="16dip"
+     android:layout_height="16dip"
+     android:paddingRight="2dip"
+	 android:background="@drawable/ico_sync0"/>
+		    
+ 	 <TextView android:id="@+id/txtNome"
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:paddingLeft="2dip"
+	 android:gravity="left"
+	 android:textColor="@color/all_black" 
+	 android:text="NOME DO CLIENTE"/>
+	 </LinearLayout>
+	 
+	 
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		
+		    <TextView  android:id="@+id/txtData"
+		    android:layout_width="80dip"
+			android:layout_height="wrap_content"
+			android:textColor="@color/all_black"
+			android:text="01/01/2012"
+			android:paddingRight="3dip"/> 
+		  
+		    <TextView  android:id="@+id/txtTotal"
+		    android:layout_width="80dip"
+			android:layout_height="wrap_content"
+			android:textColor="@color/cor_vermelho"
+			android:text="01/01/2012"
+			android:gravity="right"
+			android:paddingRight="3dip"/> 
+			
+		    <TextView android:id="@+id/lblStatus"
+			android:layout_width="50dip"
+			android:layout_height="wrap_content"
+			android:textColor="@color/cor_label"
+			android:text="Status"/> 
+			
+		    <TextView android:id="@+id/txtSituacao"
+			android:layout_width="80dip"
+			android:layout_height="wrap_content"
+			android:textColor="@color/all_black"
+			android:text="Enviado"/> 
+					    	
+  		</LinearLayout>
+     		
+		  	
+</LinearLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/lay_cons_pedidos_simples.xml -->

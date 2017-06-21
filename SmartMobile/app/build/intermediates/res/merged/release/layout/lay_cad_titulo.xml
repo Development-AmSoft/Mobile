@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/LinearLayout01"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ScrollView android:id="@+id/ScrollView01"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+<LinearLayout android:id="@+id/LinearLayout02"
+android:layout_width="fill_parent"
+android:layout_height="30px"
+android:orientation="vertical">
+
+    
+    
+
+    <TextView
+        android:id="@+id/lblTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Documento:" />
+    
+       <Spinner
+        android:id="@+id/cmbTipo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+       
+       
+            <TextView
+        android:id="@+id/lblCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliente:" />
+
+    <EditText
+        android:id="@+id/edtCliente"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/lblCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código:" />
+
+    <EditText
+        android:id="@+id/edtCodigo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+    <TextView
+        android:id="@+id/lblDocumento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Documento:" />
+
+    <EditText
+        android:id="@+id/edtDocumento"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+    <TextView
+        android:id="@+id/lblEmissao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emissão:" />
+
+    <EditText
+        android:id="@+id/edtEmissao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lblVencimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vencimento:" />
+
+    <AutoCompleteTextView
+        android:id="@+id/edtVencimento"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/lblValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor R$:" />
+
+    <EditText
+        android:id="@+id/edtValor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress" />
+
+    <TextView
+        android:id="@+id/lblHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Histórico:" />
+    
+     <EditText
+        android:id="@+id/edtHistorico"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+</LinearLayout>
+</ScrollView>
+</LinearLayout>
+
+     <!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/lay_cad_titulo.xml -->

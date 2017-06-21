@@ -1,0 +1,44 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Menu Topo Principal -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/MenuPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#565656" >
+
+            <!-- Menu Topo - Logo -->
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="SmartMobile"
+                android:layout_toLeftOf="@+id/menuimage"
+                android:textSize="15dp"
+                android:textColor="@color/all_white" />
+
+            <!-- Menu Topo - Menu esquerdo -->
+
+            <ImageView
+                android:id="@+id/menuimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:paddingRight="18dp"
+                android:paddingTop="3dp"
+                android:src="@drawable/menu" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</merge><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/cmodelomenu.xml -->

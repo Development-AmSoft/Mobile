@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-139b459cf1d95d8737d8f67894192e849050b15a.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-972578615a8d81ba6065705647acba15edd2bc33.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-c99ae36f4d1f7b6644d2cac947c7b989468c1c73.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-fc3bf7776be4ae64c0e2c2e266114427f3c350d5.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-9dbfdbf38a3536e7d19d5960a1fa0f96c4d77939.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-c2f8234f8b975d1b9231ffbec4d5b5d654d44f7e.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-97b23c138ad470fa5fc2a1b2bdb9a00728734899.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-c436a8e6be540f0f4563ccdf66cebf93138cb30c.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-6f7f700d94007d4f452bf9bd034b49a26370fd04.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-95f2f5466dc67ed0e4388c5218ebf1760244b214.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-5cf2affb79fe6532b2cfe4ff10de2bc8300bc11a.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-8ec195f90b40d4a890531d1378193cfd4fb4d95a.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-71268776eb31c3627a2db9e50eb2754f89060619.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-8da01fb37e6d6870d9fdad31f320ed7f571c9f20.jar" />
+    </item>
+    <item
+        jar="C:\Users\projeto04\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-59f9711fc053b373d324a49334efc3c1ba4b69bb.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\libs\ksoap2-android-assembly-2.4-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e8796346a9191a019e936210a2dc50662c57594b">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\ksoap2-android-assembly-2.4-jar-with-dependencies-9191e5bc755d821fe5230c34bd14123523cb3144.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-ba945b9e6a33e876871f5c28d5779028d1dcce0a.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-5373baa06ec56f609fcb61dfaf62e6867b1ac95b.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-122b3b8ec19fbe6e776ec8509db82744d21d936e.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\libs\jdom-1.1.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8bdfeb39fa929c35f5e4f0b02d34350db39a1efc">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\jdom-1.1.3-9396995e5f570cfb476b509beab08fc93b535ada.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-a91ea3f7ed1526a8a9f6b5ac64f1aaa20d07b5a6.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-6ed579fab5761160093d240c9c5c4bc047b1af5d.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-1c043fa7732fdd1caf17bbad805990cb6f67e788.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2e24e5f1b11170163028277de63f709e42525db4">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-e5b2f5570def531e305260ac513366e197c2f997.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\libs\picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\picasso-2.4.0-6510f1fc5b62ae4e54d246b80c92cadbe68e6133.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-c3f626f8770c2f56dc15afd27b39b7df7ff47c55.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-62f42d557ecef6a5d6b4bc0460197a9b1d84a5d5.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-1fcfe7e1e70fac1aaebdb15f7dbbb3ad78fbd7f9.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-4090b6b580c490440f184f6d153a24dc87da096a.jar" />
+    </item>
+    <item
+        jar="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
+        <dex dex="D:\SVN\SmartMobile-AndroidStudio\SmartMobile\app\build\intermediates\pre-dexed\debug\classes-6beba9d40b1fefc269f7ff359d381b86027a5c90.jar" />
+    </item>
+
+</items>

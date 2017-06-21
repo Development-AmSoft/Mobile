@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imgSituacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginRight="5dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtNome"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="NOME DO CLIENTE"
+                android:textColor="@color/all_black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtFantasia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="FANTASIA BEM GRANDE BLA BLA BLA BLA 12312312"
+                android:textColor="@color/all_black" />
+
+            <TextView
+                android:id="@+id/lblUltData"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:text="Pedido:"
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtUltData"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:paddingRight="3dip"
+                android:text="01/01/2012"
+                android:textColor="@color/all_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtCPFCNPJ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CPFCNPJ"
+                android:textColor="@color/all_black" />
+
+            <TextView
+                android:id="@+id/lblUltTotal"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtUltTotal"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:paddingRight="3dip"
+                android:text="500.00"
+                android:textColor="@color/all_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txtCidade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CPFCNPJ"
+                android:textColor="@color/all_black" />
+
+            <TextView
+                android:id="@+id/lblStatus"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:textColor="@color/titulo" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:text="Enviado"
+                android:textColor="@color/all_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/lay_cons_clientes.xml -->

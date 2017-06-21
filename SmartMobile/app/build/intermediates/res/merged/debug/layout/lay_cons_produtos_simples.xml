@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal">
+    
+    <ImageView 
+    android:id="@+id/imgCheck"
+    android:layout_width="16dip"
+    android:layout_height="16dip"
+    android:paddingRight="3dip"/>
+	
+	<TextView android:id="@+id/txtDescricao"
+	android:layout_width="160dip"
+	android:layout_height="wrap_content"
+	android:gravity="left"
+	android:text="DESCRICAO"
+	android:textColor="@color/all_black"
+	android:layout_weight="1"/>
+	
+    <TextView android:id="@+id/txtValor"
+    android:layout_width="70dip"
+    android:paddingRight="3dip" 
+    android:text="0000.00"
+    android:textColor="@color/all_black"
+    android:gravity="right"
+    android:layout_height="wrap_content"/>
+
+</LinearLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/lay_cons_produtos_simples.xml -->

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/LinearLayout01"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ScrollView android:id="@+id/ScrollView01"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+<LinearLayout
+    android:id="@+id/LinearLayout02"
+    android:layout_width="fill_parent"
+    android:layout_height="30px"
+    android:orientation="vertical" >
+
+     <TextView
+        android:id="@+id/lblOperacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Origem do Pedido:"
+        android:textColor="@color/all_black" />
+
+    <Spinner
+        android:id="@+id/cmbOperacao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/all_black" />
+    
+    <TextView
+        android:id="@+id/lblOrigem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Origem do Pedido:"
+        android:textColor="@color/all_black" />
+
+    <Spinner
+        android:id="@+id/cmbOrigem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/all_black" />
+
+ 
+
+    <TextView
+        android:id="@+id/lblNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Razão Social/Nome:" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:inputType="textMultiLine" />
+
+        <ImageButton
+            android:id="@+id/btnConsCliente"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_gravity="right"
+            android:background="@drawable/botao_filtro"
+            android:cropToPadding="false"
+            android:paddingLeft="10dp"
+            android:scaleType="fitCenter" >
+        </ImageButton>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblFantasia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fantasia/Apelido:"
+        android:textColor="@color/all_black" />
+
+    <EditText
+        android:id="@+id/edtFantasia"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/lblCPFCNPJ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CNPJ/CPF:"
+        android:textColor="@color/all_black" />
+
+    <EditText
+        android:id="@+id/edtCPFCNPJ"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/lblLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista de Preço:"
+        android:textColor="@color/all_black" />
+
+    <Spinner
+        android:id="@+id/cmbListaPreco"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lblForma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forma de Pagamento:"
+        android:textColor="@color/all_black" />
+
+    <Spinner
+        android:id="@+id/cmbFormaPgto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lblObservacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observação:"
+        android:textColor="@color/all_black" />
+
+    <EditText
+        android:id="@+id/edtObs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine" />
+</LinearLayout>
+
+</ScrollView>
+</LinearLayout>
+
+     

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/conteudo_sombra" >
+
+    
+ <!--    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/all_laranja" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="4dip" >
+
+                <ImageView
+                    android:id="@+id/lblVend"
+                    android:layout_width="24dip"
+                    android:layout_height="24dip"
+                    android:background="@drawable/ico_empresa"
+                    android:paddingLeft="2px"
+                    android:textColor="@color/all_white" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EMPRESA"
+                    android:textColor="@color/all_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="4dip" >
+
+                <ImageView
+                    android:id="@+id/lblVend"
+                    android:layout_width="24dip"
+                    android:layout_height="24dip"
+                    android:background="@drawable/ico_vendedor"
+                    android:paddingLeft="2px"
+                    android:textColor="@color/all_white" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VENDEDOR"
+                    android:textColor="@color/all_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+ -->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <smart.mobile.utils.GridViewHeigth.ExpandableHeightGridView
+                android:id="@+id/menu_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:isScrollContainer="false"
+                android:numColumns="4"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="9dp" >
+            </smart.mobile.utils.GridViewHeigth.ExpandableHeightGridView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

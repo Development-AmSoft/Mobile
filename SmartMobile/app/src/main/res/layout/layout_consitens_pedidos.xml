@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	
+	<TextView android:id="@+id/txt1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="left"
+		android:text="CLIENTE" />
+	
+	 <TwoLineListItem
+	     xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:layout_width="fill_parent"
+	     android:layout_height="24dp"
+	     android:minHeight="?android:attr/listPreferredItemHeight"
+	     android:mode="oneLine"
+	     android:paddingBottom="2dip"
+	     android:paddingTop="2dip" >
+
+		<TextView
+		    android:id="@+id/lbl2"
+		    android:gravity="left"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Data : "/>
+
+		<TextView
+		    android:id="@+id/txt2"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:gravity="right"
+		    android:text="01/01/2012" />
+
+	 </TwoLineListItem>  
+	 
+	      <TwoLineListItem
+	     xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:layout_width="fill_parent"
+	     android:layout_height="24dp"
+	     android:minHeight="?android:attr/listPreferredItemHeight"
+	     android:mode="oneLine"
+	     android:paddingBottom="2dip"
+	     android:paddingTop="2dip" >
+
+		<TextView
+		    android:id="@+id/lbl3"
+		    android:gravity="left"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Valor R$ : "/>
+
+		<TextView
+		    android:id="@+id/txt3"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:gravity="right"
+		    android:text="0.00" />
+
+	 </TwoLineListItem>  
+	 
+	          
+	            <TwoLineListItem
+	     xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:layout_width="fill_parent"
+	     android:layout_height="24dp"
+	     android:minHeight="?android:attr/listPreferredItemHeight"
+	     android:mode="oneLine"
+	     android:paddingBottom="2dip"
+	     android:paddingTop="2dip" >
+
+		<TextView
+		    android:id="@+id/lbl4"
+		    android:gravity="left"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="Situação : "/>
+		
+		<ImageView
+		    android:id="@+id/imageView1"
+		    android:layout_width="24px"
+		    android:layout_height="24px"
+		    android:layout_alignParentRight="true"
+		    android:src="@drawable/ico_sync1" />
+
+	 </TwoLineListItem>  
+	
+	
+
+</LinearLayout>

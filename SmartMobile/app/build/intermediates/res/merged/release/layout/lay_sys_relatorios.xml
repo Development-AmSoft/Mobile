@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- row.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conteudo_sombra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/all_white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@color/all_white"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dip"
+            android:paddingTop="5px" >
+
+            <Spinner
+                android:id="@+id/cmbTipo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/all_white"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dip"
+            android:paddingTop="5px" >
+
+            <EditText
+                android:id="@+id/edtFiltro"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:layout_weight="1"
+                android:focusable="true" />
+
+            <ImageButton
+                android:id="@+id/btnSincroniza"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_gravity="right"
+                android:cropToPadding="false"
+                android:paddingLeft="10dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/botao_refresh" >
+            </ImageButton>
+        </LinearLayout>
+
+        <!-- main.xml -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:paddingBottom="3dp"
+            android:background="@drawable/botton_border_titulo">
+
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:text="" />
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+             	android:textColor="@color/all_black"
+             	android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Bruto" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/cor_azul"
+                android:layout_height="wrap_content"
+                android:text="Acrésc." />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/cor_vermelho"
+                android:layout_height="wrap_content"
+                android:text="Desc." />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/cor_verde"
+                android:layout_height="wrap_content"
+                android:text="Líquido R$" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/SCHEDULE"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/all_white"
+            android:cacheColorHint="#00000000"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="5dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/InnerRelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/lblStatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="2dip"
+                android:text="0 registros encontrados."
+                android:textColor="@color/titulo" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/lay_sys_relatorios.xml -->

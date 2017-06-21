@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- row.xml -->
+
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+     
+     <LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+    
+	     <TextView android:id="@+id/txtDescricao"
+	     android:textColor="@color/all_black"
+	     android:layout_height="wrap_content"
+	     android:layout_width="fill_parent"
+	     android:text="01/01/2010"
+	     />
+     
+     </LinearLayout>
+     
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
+     	<TableRow>
+     	    <TextView android:id="@+id/vazio"
+			android:textColor="@color/all_black"
+			android:layout_width="0dip"
+			android:layout_weight="1"
+			android:layout_height="wrap_content" 
+			android:text=""
+     		android:gravity="center"/>
+     	    
+			<TextView android:id="@+id/txtTotal"
+			android:textColor="@color/all_black"
+			android:layout_width="0dip"
+			android:layout_weight="1"
+			android:layout_height="wrap_content" 
+			android:text="0.00"
+     		android:gravity="center"/>
+			
+			<TextView android:id="@+id/txtCredito"
+			android:textColor="@color/cor_azul" 
+			android:layout_width="0dip"
+			android:layout_weight="1"
+			android:layout_height="wrap_content" 
+			android:text="0.00"
+			android:gravity="center"/>
+			
+			<TextView android:id="@+id/txtDebito"
+			android:textColor="@color/cor_vermelho"
+			android:layout_width="0dip"
+			android:layout_weight="1"
+			android:layout_height="wrap_content" 
+			android:text="0.00"
+			android:gravity="center"/>
+			
+			<TextView android:id="@+id/txtSaldo"
+			android:textColor="@color/all_black"
+			android:layout_width="0dip"
+			android:layout_weight="1"
+			android:layout_height="wrap_content" 
+			android:text="0.00"
+			android:gravity="center"/>
+	    </TableRow>
+	</TableLayout>
+ 
+
+</LinearLayout>

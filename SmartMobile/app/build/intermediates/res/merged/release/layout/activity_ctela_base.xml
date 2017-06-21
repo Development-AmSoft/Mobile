@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TelaBase"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_white"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".CTelaBase" >
+
+    <include
+        android:id="@+id/FooterPrinciapl"
+        layout="@layout/cmodelofooter" />
+
+    <LinearLayout
+        android:id="@+id/BaseTopo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- HEADER TOPO MENU -->
+
+        <include
+            android:id="@+id/TopoMenu"
+            layout="@layout/cmodelomenu" />
+
+        <!-- SCROLL do conteudo -->
+
+       <!--  <ScrollView
+            android:id="@+id/testeScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="45dp" >
+ -->
+
+            <RelativeLayout
+                android:id="@+id/BaseConteudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="45dp"
+                android:focusableInTouchMode="true"
+                android:padding="1dp" >
+
+            </RelativeLayout>
+        <!-- </ScrollView> -->
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/activity_ctela_base.xml -->

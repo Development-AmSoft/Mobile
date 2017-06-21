@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conteudo_sombra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/all_white" >
+
+        <ScrollView
+            android:id="@+id/ScrollView01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_width="fill_parent"
+                android:layout_height="30px"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/lblNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Razão Social/Nome:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtNome"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/all_black" >
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/lblFantasia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fantasia/Apelido:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtFantasia"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblCPFCNPJ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CNPJ/CPF:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtCPFCNPJ"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblInscricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inscrição/RG:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtInscricao"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblResponsavel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Responsável:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtResponsavel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblUF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UF:"
+                    android:textColor="@color/all_black" />
+
+                <Spinner
+                    android:id="@+id/cmbUF"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblCidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cidade:"
+                    android:textColor="@color/all_black" />
+
+                <Spinner
+                    android:id="@+id/cmbCidade"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblEndereco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Endereço:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtEndereco"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblNumero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtNumero"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblBairro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bairro:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtBairro"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblCEP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CEP:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtCEP"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblComplemento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complemento:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtComplemento"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblTelefone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefone:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtTelefone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblCelular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Celular:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtCelular"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:inputType="phone"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email NF-e:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblObservacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Observação:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtObs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblLimite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limite de Crédito:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtLimite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblForma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forma de Pagamento:"
+                    android:textColor="@color/all_black" />
+
+                <Spinner
+                    android:id="@+id/cmbFormaPgto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lista de Preço:"
+                    android:textColor="@color/all_black" />
+
+                <Spinner
+                    android:id="@+id/cmbListaPreco"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textColor="@color/all_black" />
+
+                <TextView
+                    android:id="@+id/lblUltDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Último Pedido:"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtUltData"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textColor="@color/all_black" />
+
+                <EditText
+                    android:id="@+id/edtUltTotal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/all_black" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/SVN/SmartMobile-AndroidStudio/SmartMobile/app/src/main/res/layout/lay_cad_cliente.xml -->
