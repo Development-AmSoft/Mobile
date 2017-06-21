@@ -1,0 +1,139 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><META NAME="save" CONTENT="history" /><title>Colunas esparsas</title><meta name="Language" content="pt-br" /><meta name="Microsoft.Help.Id" content="7d4237e0-818f-4639-9093-d5ac9683fc71" /><meta name="Description" content="Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos à custa de maior sobrecarga para recuperar valores não nulos." /><meta name="Microsoft.Help.ContentType" content="Concepts" /><link rel="stylesheet" type="text/css" href="../local/Classic.css" /><script type="text/javascript" src="../scripts/EventUtilities.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/SplitScreen.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/Dropdown.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/script_manifold.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/script_feedBack.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/CheckboxMenu.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/CommonUtilities.js">&amp;nbsp;</script><script type="text/javascript" src="../local/script_main.js">&amp;nbsp;</script></head><body><div id="header"><table id="bottomTable" cellpadding="0" cellspacing="0"><tr><td align="left"><span id="headerBold">Colunas esparsas</span></td></tr></table><table id="gradientTable"><tr><td class="nsrBottom" background="../icons/gradient.gif" /></tr></table></div><div id="mainSection"><div id="mainBody"><div class="introduction"><p>Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos à custa de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20% a 40%.</p><p>O SQL Server JDBC Driver 3.0 oferece suporte a colunas esparsas quando você se conecta a um servidor SQL Server 2008 (ou posterior). Você pode usar <a href="f173fa5d-e114-4a37-a5c4-2baad9ff3af1.htm">SQLServerDatabaseMetaData.getColumns</a>, <a href="e2b0e0f7-717c-48e6-bcd2-a325d938a833.htm">SQLServerDatabaseMetaData.getFunctionColumns</a> ou <a href="4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2.htm">SQLServerDatabaseMetaData.getProcedureColumns</a> para determinar qual coluna é esparsa e qual coluna é a coluna do conjunto de colunas.</p><p>Conjuntos de coluna são colunas computadas que retornam todas as colunas esparsas na forma de XML sem tipo. Considere o uso de conjuntos de colunas quando o número de colunas em uma tabela for grande ou maior que 1024, ou quando trabalhar nessas colunas esparsas individualmente for difícil. Um conjunto de colunas pode conter até 30.000 colunas.</p></div><h1 class="heading">Exemplo</h1><div id="sectionSection0" class="section" name="collapseableSection" style=""><h1 class="heading">Descrição</h1><div class="subsection"><p>Este exemplo demonstra como detectar conjuntos de colunas. Ele também mostra como analisar a saída XML de um conjunto de colunas para obter os dados das colunas esparsas.</p><p>O primeiro código que lista o Transact-SQL a ser executado no servidor.</p><p>O segundo código que lista o código-fonte Java. Antes de compilar o aplicativo, altere o nome do servidor na cadeia de conexão.</p></div><h1 class="heading">Código</h1><div class="subsection"><div class="sampleCode"><span codeLanguage="other"><pre>use AdventureWorks
+CREATE TABLE ColdCalling
+(
+ID int IDENTITY(1,1) PRIMARY KEY,
+[Date] date,
+[Time] time,
+PositiveFirstName nvarchar(50) SPARSE,
+PositiveLastName nvarchar(50) SPARSE,
+SpecialPurposeColumns XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
+);
+GO
+
+INSERT ColdCalling ([Date], [Time])
+VALUES ('10-13-09','07:05:24')
+GO
+      
+INSERT ColdCalling ([Date], [Time], PositiveFirstName, PositiveLastName)
+VALUES ('07-20-09','05:00:24', 'AA', 'B')
+GO
+      
+INSERT ColdCalling ([Date], [Time], PositiveFirstName, PositiveLastName)
+VALUES ('07-20-09','05:15:00', 'CC', 'DD')
+GO</pre></span></div></div><h1 class="heading">Código</h1><div class="subsection"><div class="sampleCode"><span codeLanguage="other"><pre>import java.sql.*;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.xml.sax.InputSource;
+
+import java.io.StringReader;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class SparseColumns {
+
+   public static void main(String args[]) {
+      final String connectionUrl = "jdbc:sqlserver://my_server;databaseName=AdventureWorks;integratedSecurity=true;";
+      
+      Connection conn = null;
+      Statement stmt = null;
+      ResultSet rs = null;
+      
+      try {
+         conn = DriverManager.getConnection(connectionUrl);
+         
+         stmt = conn.createStatement();
+         // Determine the column set column
+         String columnSetColName = null;
+         String strCmd = "SELECT name FROM sys.columns WHERE object_id=(SELECT OBJECT_ID('ColdCalling')) AND is_column_set = 1";
+         rs = stmt.executeQuery(strCmd);
+         
+         if (rs.next()) {
+            columnSetColName = rs.getString(1);
+            System.out.println(columnSetColName + " is the column set column!");
+         }
+         rs.close();
+
+         rs = null; 
+             
+         strCmd = "SELECT * FROM ColdCalling";
+         rs = stmt.executeQuery(strCmd);
+            
+         // Iterate through the result set
+         ResultSetMetaData rsmd = rs.getMetaData();
+         
+         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+         DocumentBuilder db = dbf.newDocumentBuilder();
+         InputSource is = new InputSource();
+         while (rs.next()) {
+            // Iterate through the columns
+            for (int i = 1; i &lt;= rsmd.getColumnCount(); ++i) {
+               String name = rsmd.getColumnName(i);
+               String value = rs.getString(i);
+   
+               // If this is the column set column
+               if (name.equalsIgnoreCase(columnSetColName)) {
+                  System.out.println(name);
+                  
+                  // Instead of printing the raw XML, parse it
+                  if (value != null) {
+                     // Add artificial root node "sparse" to ensure XML is well formed
+                     String xml = "&lt;sparse&gt;" + value + "&lt;/sparse&gt;";
+   
+                     is.setCharacterStream(new StringReader(xml));
+                     Document doc = db.parse(is);
+   
+                     // Extract the NodeList from the artificial root node that was added
+                     NodeList list = doc.getChildNodes();
+                     // This is the &lt;sparse&gt; node
+                     Node root = list.item(0); 
+                     // These are the xml column nodes
+                     NodeList sparseColumnList = root.getChildNodes(); 
+   
+                     // Iterate through the XML document
+                     for (int n = 0; n &lt; sparseColumnList.getLength(); ++n) {
+                        Node sparseColumnNode = sparseColumnList.item(n);
+                        String columnName = sparseColumnNode.getNodeName();
+                        // Note that the column value is not in the sparseColumNode, it is the value of the first child of it
+                        Node sparseColumnValueNode = sparseColumnNode.getFirstChild();
+                        String columnValue = sparseColumnValueNode.getNodeValue();
+                        
+                        System.out.println("\t" + columnName + "\t: " + columnValue);
+                     }
+                  }
+               } else {   // Just print the name + value of non-sparse columns
+                  System.out.println(name + "\t: " + value);
+               }
+            }
+            System.out.println();//New line between rows
+         }
+      } catch (Exception e) {
+         e.printStackTrace();
+      } finally {
+         if (rs != null) {
+            try {
+               rs.close();
+            } catch (Exception e) {
+               e.printStackTrace();
+            }
+         }
+         if (stmt != null) {
+            try {
+               stmt.close();
+            } catch (Exception e) {
+               e.printStackTrace();
+            }
+         }
+         if (conn != null) {
+            try {
+               conn.close();
+            } catch (Exception e) {
+               e.printStackTrace();
+            }
+         }
+      }
+   }      
+}</pre></span></div></div></div><span id="seeAlsoSpan"><h1 class="heading">Consulte também</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection" style=""><div class="seeAlsoStyle"><span sdata="link"><a href="e1592499-b87b-45ee-bab8-beaba8fde841.htm">Melhorando o desempenho e a confiabilidade com o JDBC Driver</a></span></div></div></div><div id="footer" class="section"><span id="feedbackarea">Envie <a href="javascript:SubmitFeedback('DevDocs@Microsoft.com','','','','8.0.12060.10000','%0\dObrigado%20por%20seus%20comentários.%20As%20equipes%20de%20desenvolvimento%20usam%20seus%20comentários%20para%20melhorar%20a%20documentação.%20Enquanto%20estivermos%20examinando%20seus%20comentários%20,%20poderemos%20enviar%20um%20email%20solicitando%20mais%20esclarecimentos%20ou%20comentários%20sobre%20a%20solução%20encontrada%20.%20Não%20usaremos%20seu%20endereço%20de%20email%20para%20nenhum%20outro%20propósito%20e%20o%20excluiremos%20após%20concluirmos%20a%20análise.%0\APara%20obter%20informações%20sobre%20a%20política%20de%20privacidade%20da%20Microsoft,%20consulte%20http://privacy.microsoft.com/pt-br/default.aspx.%0\A%0\d','Comentários%20do%20cliente.');">comentários</a> sobre este tópico à Microsoft.</span><span id="copyrightarea"><p><a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">© 2012 Microsoft. Todos os direitos reservados.</a></p></span></div></div></body></html>

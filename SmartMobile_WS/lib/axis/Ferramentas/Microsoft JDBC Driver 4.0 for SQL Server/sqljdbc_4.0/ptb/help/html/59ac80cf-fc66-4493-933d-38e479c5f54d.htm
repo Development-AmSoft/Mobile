@@ -1,0 +1,116 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><META NAME="save" CONTENT="history" /><title>Exemplo de tipos de dados básicos</title><meta name="Language" content="pt-br" /><meta name="System.Keywords" content="exemplo de tipos de dados básicos" /><meta name="Microsoft.Help.Id" content="59ac80cf-fc66-4493-933d-38e479c5f54d" /><meta name="Description" content="Este aplicativo de exemplo do Microsoft JDBC Driver para SQL Server demonstra como usar métodos de getter de conjunto de resultados para recuperar valores de tipos de dados básicos do SQL Server, além de como usar métodos de atualização de conjunto de resu" /><meta name="Microsoft.Help.ContentType" content="Samples" /><link rel="stylesheet" type="text/css" href="../local/Classic.css" /><script type="text/javascript" src="../scripts/EventUtilities.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/SplitScreen.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/Dropdown.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/script_manifold.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/script_feedBack.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/CheckboxMenu.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/CommonUtilities.js">&amp;nbsp;</script><script type="text/javascript" src="../local/script_main.js">&amp;nbsp;</script></head><body><div id="header"><table id="bottomTable" cellpadding="0" cellspacing="0"><tr><td align="left"><span id="headerBold">Exemplo de tipos de dados básicos</span></td></tr></table><table id="gradientTable"><tr><td class="nsrBottom" background="../icons/gradient.gif" /></tr></table></div><div id="mainSection"><div id="mainBody"><div class="introduction"><p>Este aplicativo de exemplo do Microsoft JDBC Driver para SQL Server demonstra como usar métodos de getter de conjunto de resultados para recuperar valores de tipos de dados básicos do SQL Server, além de como usar métodos de atualização de conjunto de resultados para atualizar esses valores.</p><p>O arquivo de código deste exemplo chama-se basicDT.java e pode ser encontrado neste local:</p><p>&lt;<i>diretório de instalação</i>&gt;\sqljdbc_&lt;<i>versão</i>&gt;\&lt;<i>idioma</i>&gt;\help\samples\datatypes</p></div><h1 class="heading">Requisitos</h1><div id="requirementsTitleSection" class="section" name="collapseableSection" style=""><p>Para executar este aplicativo de exemplo, será necessário definir o classpath para incluir o arquivo sqljdbc.jar ou o arquivo sqljdbc4.jar. Se no classpath faltar uma entrada para sqljdbc.jar ou sqljdbc4.jar, o aplicativo de exemplo lançará a exceção comum "Class not found". Também será necessário o acesso ao banco de dados de exemplo da AdventureWorks no SQL Server 2005. Para obter mais informações sobre como definir o classpath, consulte <span sdata="link"><a href="6faaf05b-8b70-4ed2-9b44-eee5897f1cd0.htm">Usando JDBC Driver</a></span>.</p><p>Além disso, você deve criar a seguinte tabela e dados de exemplo no banco de dados de exemplo SQL Server 2005 AdventureWorks:</p><div class="sampleCode"><span codeLanguage="other"><pre>use AdventureWorks
+CREATE TABLE DataTypesTable 
+   (Col1 int IDENTITY, 
+    Col2 char,
+    Col3 varchar(50), 
+    Col4 bit,
+    Col5 decimal(18, 2),
+    Col6 money,
+    Col7 datetime,
+    Col8 date,
+    Col9 time,
+    Col10 datetime2,
+    Col11 datetimeoffset
+    );
+
+INSERT INTO DataTypesTable 
+VALUES ('A', 'Some text.', 0, 15.25, 10.00, '01/01/2006 23:59:59.991', '01/01/2006', '23:59:59', '01/01/2006 23:59:59.12345', '01/01/2006 23:59:59.12345 -1:00')</pre></span></div><div style="margin: .5em 1.5em .5em 1.5em"><b></b><p>O Microsoft JDBC Driver para SQL Server fornece os arquivos de biblioteca de classes sqljdbc.jar e sqljdbc4.jar a serem usados, dependendo das configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte <span sdata="link"><a href="447792bb-f39b-49b4-9fd0-1ef4154c74ab.htm">Requisitos de sistema para o JDBC Driver</a></span>.</p></div></div><h1 class="heading">Exemplo</h1><div id="exampleSection" class="section" name="collapseableSection" style=""><p>No exemplo a seguir, o código de exemplo faz uma conexão com o banco de dados da AdventureWorks no SQL Server 2005 e recupera uma única linha de dados da tabela de teste DataTypesTable. O método <b>displayRow</b> personalizado é chamado para exibir todos os dados contidos no conjunto de resultados usando vários métodos <b>get&lt;Type&gt;</b> da classe <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a>.</p><p>Em seguida, o exemplo usa vários métodos <b>update&lt;Type&gt;</b> da classe <b>SQLServerResultSet</b> para atualizar os dados contidos no conjunto de resultados e chama o método <a href="cfced0ca-a281-40dc-8d2f-370d5f0bf12b.htm">updateRow</a> para persistir esses dados de volta no banco de dados.</p><p>Finalmente, o exemplo atualiza os dados contidos no conjunto de resultados e chama o método <b>displayRow</b> personalizado novamente para exibir os dados contidos no conjunto de resultados.</p><div class="sampleCode"><span codeLanguage="other"><pre>import java.sql.*;
+
+import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
+import microsoft.sql.DateTimeOffset;
+
+public class basicDT {
+   public static void main(String[] args) {
+
+      // Create a variable for the connection string.
+      String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;integratedSecurity=true;";
+   
+      // Declare the JDBC objects.
+      Connection con = null;
+      Statement stmt = null;
+      ResultSet rs = null;
+
+      try {
+         // Establish the connection.
+         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+         con = DriverManager.getConnection(connectionUrl);
+
+         // Create and execute an SQL statement that returns some data
+         // and display it.
+         String SQL = "SELECT * FROM DataTypesTable";
+         stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+         rs = stmt.executeQuery(SQL);         
+         rs.next();
+         displayRow("ORIGINAL DATA", rs);
+         
+         // Update the data in the result set.
+         rs.updateString(2, "B");
+         rs.updateString(3, "Some updated text.");
+         rs.updateBoolean(4, true);
+         rs.updateDouble(5, 77.89);
+         rs.updateDouble(6, 1000.01);
+         long timeInMillis = System.currentTimeMillis();
+         Timestamp ts = new Timestamp(timeInMillis);
+         rs.updateTimestamp(7, ts);
+         rs.updateDate(8, new Date(timeInMillis));
+         rs.updateTime(9, new Time(timeInMillis));
+         rs.updateTimestamp(10, ts);
+
+         //-480 indicates GMT - 8:00 hrs
+         ((SQLServerResultSet)rs).updateDateTimeOffset(11, DateTimeOffset.valueOf(ts, -480));
+         
+         rs.updateRow();
+
+         // Get the updated data from the database and display it.
+         rs = stmt.executeQuery(SQL);
+         rs.next();
+         displayRow("UPDATED DATA", rs);
+      }
+
+      // Handle any errors that may have occurred.
+      catch (Exception e) {
+         e.printStackTrace();
+      }
+
+      finally {
+         if (rs != null) 
+         try { 
+         rs.close(); 
+         } 
+         catch(Exception e) {}
+         
+         if (stmt != null) 
+         try { stmt.close(); 
+         } 
+         catch(Exception e) {}
+         
+         if (con != null) 
+         try { 
+         con.close(); 
+         } 
+         catch(Exception e) {}
+      }
+   }
+
+   private static void displayRow(String title, ResultSet rs) {
+      try {
+         System.out.println(title);
+         System.out.println(rs.getInt(1) + " , " +  // SQL integer type.
+               rs.getString(2) + " , " +            // SQL char type.
+               rs.getString(3) + " , " +            // SQL varchar type.
+               rs.getBoolean(4) + " , " +           // SQL bit type.
+               rs.getDouble(5) + " , " +            // SQL decimal type.
+               rs.getDouble(6) + " , " +            // SQL money type.
+               rs.getTimestamp(7) + " , " +            // SQL datetime type.
+               rs.getDate(8) + " , " +              // SQL date type.
+               rs.getTime(9) + " , " +              // SQL time type.
+               rs.getTimestamp(10) + " , " +            // SQL datetime2 type.
+               ((SQLServerResultSet)rs).getDateTimeOffset(11)); // SQL datetimeoffset type. 
+         
+         System.out.println();
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+   }
+}
+</pre></span></div></div><span id="seeAlsoSpan"><h1 class="heading">Consulte também</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection" style=""><div class="seeAlsoStyle"><span sdata="link"><a href="b39f44d0-3710-4bc6-880c-35bd8c10a734.htm">Trabalhando com tipos de dados (JDBC)</a></span></div></div></div><div id="footer" class="section"><span id="feedbackarea">Envie <a href="javascript:SubmitFeedback('DevDocs@Microsoft.com','','','','8.0.12060.10000','%0\dObrigado%20por%20seus%20comentários.%20As%20equipes%20de%20desenvolvimento%20usam%20seus%20comentários%20para%20melhorar%20a%20documentação.%20Enquanto%20estivermos%20examinando%20seus%20comentários%20,%20poderemos%20enviar%20um%20email%20solicitando%20mais%20esclarecimentos%20ou%20comentários%20sobre%20a%20solução%20encontrada%20.%20Não%20usaremos%20seu%20endereço%20de%20email%20para%20nenhum%20outro%20propósito%20e%20o%20excluiremos%20após%20concluirmos%20a%20análise.%0\APara%20obter%20informações%20sobre%20a%20política%20de%20privacidade%20da%20Microsoft,%20consulte%20http://privacy.microsoft.com/pt-br/default.aspx.%0\A%0\d','Comentários%20do%20cliente.');">comentários</a> sobre este tópico à Microsoft.</span><span id="copyrightarea"><p><a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">© 2012 Microsoft. Todos os direitos reservados.</a></p></span></div></div></body></html>

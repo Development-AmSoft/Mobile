@@ -1,0 +1,49 @@
+﻿<html xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><META NAME="save" CONTENT="history" /><title>Exemplo de fonte de dados</title><meta name="Language" content="pt-br" /><meta name="System.Keywords" content="exemplo de fonte de dados" /><meta name="Microsoft.Help.Id" content="b4a933ee-f2c6-4e0d-a96d-6dd061abf759" /><meta name="Description" content="Este aplicativo de exemplo do Microsoft JDBC Driver para SQL Server demonstra como conectar-se a um banco de dados do SQL Server usando um objeto de fonte de dados." /><meta name="Microsoft.Help.ContentType" content="Samples" /><link rel="stylesheet" type="text/css" href="../local/Classic.css" /><script type="text/javascript" src="../scripts/EventUtilities.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/SplitScreen.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/Dropdown.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/script_manifold.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/script_feedBack.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/CheckboxMenu.js">&amp;nbsp;</script><script type="text/javascript" src="../scripts/CommonUtilities.js">&amp;nbsp;</script><script type="text/javascript" src="../local/script_main.js">&amp;nbsp;</script></head><body><div id="header"><table id="bottomTable" cellpadding="0" cellspacing="0"><tr><td align="left"><span id="headerBold">Exemplo de fonte de dados</span></td></tr></table><table id="gradientTable"><tr><td class="nsrBottom" background="../icons/gradient.gif" /></tr></table></div><div id="mainSection"><div id="mainBody"><div class="introduction"><p>Este aplicativo de exemplo do Microsoft JDBC Driver para SQL Server demonstra como conectar-se a um banco de dados do SQL Server usando um objeto de fonte de dados. Ele também demonstra como recuperar dados de um banco de dados do SQL Server usando um procedimento armazenado.</p><p>O arquivo de código desse exemplo chama-se connectDS.java e pode ser encontrado neste local:</p><p>&lt;<i>installation directory</i>&gt;\sqljdbc_&lt;<i>version</i>&gt;\&lt;<i>language</i>&gt;\help\samples\connections</p></div><h1 class="heading">Requisitos</h1><div id="requirementsTitleSection" class="section" name="collapseableSection" style=""><p>Para executar este aplicativo de exemplo, será necessário definir o classpath para incluir o arquivo sqljdbc.jar ou o arquivo sqljdbc4.jar. Se no classpath faltar uma entrada para sqljdbc.jar ou sqljdbc4.jar, o aplicativo de exemplo lançará a exceção comum "Class not found". Também será necessário o acesso ao banco de dados de exemplo SQL Server 2005 AdventureWorks. Para obter mais informações sobre como definir o classpath, consulte <span sdata="link"><a href="6faaf05b-8b70-4ed2-9b44-eee5897f1cd0.htm">Usando JDBC Driver</a></span>.</p><div style="margin: .5em 1.5em .5em 1.5em"><b></b><p>O Microsoft JDBC Driver para SQL Server fornece os arquivos de biblioteca de classes sqljdbc.jar e sqljdbc4.jar a serem usados, dependendo das configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte <span sdata="link"><a href="447792bb-f39b-49b4-9fd0-1ef4154c74ab.htm">Requisitos de sistema para o JDBC Driver</a></span>.</p></div></div><h1 class="heading">Exemplo</h1><div id="exampleSection" class="section" name="collapseableSection" style=""><p>No exemplo a seguir, o código de exemplo define várias propriedades de conexão usando métodos setter do objeto <a href="097434fd-2b74-411c-a5ed-eba04481dde5.htm">SQLServerDataSource</a> e, em seguida, chama o método <a href="a15ee185-f433-4915-9c75-5ebd90c758fd.htm">getConnection</a> do objeto <b>SQLServerDataSource</b> para retornar um objeto <a href="937292a6-1525-423e-a2b2-a18fd34c2893.htm">SQLServerConnection</a>.</p><p>Em seguida, o código de exemplo usa o método <a href="265b024c-898a-4bd0-98b5-f06076717b9e.htm">prepareCall</a> do objeto <b>SQLServerConnection</b> para criar um objeto <a href="30710a63-c05d-47d9-9cf9-c087a1c76373.htm">SQLServerCallableStatement</a> e, então, o método <a href="dfff3358-f391-4af6-84c1-b94c029f506d.htm">executeQuery</a> é chamado para executar o procedimento armazenado.</p><p>Por fim, o exemplo usa o objeto <a href="eaffcff1-286c-459f-83da-3150778480c9.htm">SQLServerResultSet</a> retornado do método <b>executeQuery</b> para iterar pelos resultados retornados pelo procedimento armazenado.</p><div class="sampleCode"><span codeLanguage="other"><pre>import java.sql.*;
+import com.microsoft.sqlserver.jdbc.*;
+
+public class connectDS {
+
+   public static void main(String[] args) {
+
+      // Declare the JDBC objects.
+      Connection con = null;
+      CallableStatement cstmt = null;
+      ResultSet rs = null;
+
+      try {
+         // Establish the connection. 
+         SQLServerDataSource ds = new SQLServerDataSource();
+         ds.setUser("UserName");
+         ds.setPassword("*****");
+         ds.setServerName("localhost");
+         ds.setPortNumber(1433); 
+         ds.setDatabaseName("AdventureWorks");
+         con = ds.getConnection();
+
+         // Execute a stored procedure that returns some data.
+         cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");
+         cstmt.setInt(1, 50);
+         rs = cstmt.executeQuery();
+
+         // Iterate through the data in the result set and display it.
+         while (rs.next()) {
+            System.out.println("EMPLOYEE: " + rs.getString("LastName") + 
+               ", " + rs.getString("FirstName"));
+            System.out.println("MANAGER: " + rs.getString("ManagerLastName") + 
+               ", " + rs.getString("ManagerFirstName"));
+            System.out.println();
+         }
+      }
+
+      // Handle any errors that may have occurred.
+      catch (Exception e) {
+         e.printStackTrace();
+      }
+      finally {
+         if (rs != null) try { rs.close(); } catch(Exception e) {}
+         if (cstmt != null) try { cstmt.close(); } catch(Exception e) {}
+         if (con != null) try { con.close(); } catch(Exception e) {}
+         System.exit(1);
+      }
+   }
+}</pre></span></div></div><span id="seeAlsoSpan"><h1 class="heading">Consulte também</h1></span><div id="seeAlsoSection" class="section" name="collapseableSection" style=""><div class="seeAlsoStyle"><span sdata="link"><a href="ce43cc20-46a3-42ff-a3fb-75ad1ed10e08.htm">Conectando e recuperando dados</a></span></div></div></div><div id="footer" class="section"><span id="feedbackarea">Envie <a href="javascript:SubmitFeedback('DevDocs@Microsoft.com','','','','8.0.12060.10000','%0\dObrigado%20por%20seus%20comentários.%20As%20equipes%20de%20desenvolvimento%20usam%20seus%20comentários%20para%20melhorar%20a%20documentação.%20Enquanto%20estivermos%20examinando%20seus%20comentários%20,%20poderemos%20enviar%20um%20email%20solicitando%20mais%20esclarecimentos%20ou%20comentários%20sobre%20a%20solução%20encontrada%20.%20Não%20usaremos%20seu%20endereço%20de%20email%20para%20nenhum%20outro%20propósito%20e%20o%20excluiremos%20após%20concluirmos%20a%20análise.%0\APara%20obter%20informações%20sobre%20a%20política%20de%20privacidade%20da%20Microsoft,%20consulte%20http://privacy.microsoft.com/pt-br/default.aspx.%0\A%0\d','Comentários%20do%20cliente.');">comentários</a> sobre este tópico à Microsoft.</span><span id="copyrightarea"><p><a href="9bad553b-9e70-4696-8499-2e35f772a1e0.htm">© 2012 Microsoft. Todos os direitos reservados.</a></p></span></div></div></body></html>
